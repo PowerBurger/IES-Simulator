@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9265222548cf88a4ab883ca3cb6d2fe1
+timeCreated: 1493833864
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - textBox: {instanceID: 0}
+  - talk: {instanceID: 0}
+  - click: {instanceID: 0}
+  - theText: {instanceID: 0}
+  - textFile: {fileID: 4900000, guid: c10f4edaba2f834409c7192720720acf, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

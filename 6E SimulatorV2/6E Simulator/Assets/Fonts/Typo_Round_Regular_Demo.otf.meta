@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3ae6767a9e9ff2b47b7b562884e2ecaa
+timeCreated: 1493319234
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Typo Round Regular Demo
+  fontNames:
+  - Typo Round Regular Demo
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

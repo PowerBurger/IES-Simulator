@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 00c906f9f8b249448a8c8af209af27e5
+timeCreated: 1493318979
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: TypoGraphica
+  fontNames:
+  - TypoGraphica
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

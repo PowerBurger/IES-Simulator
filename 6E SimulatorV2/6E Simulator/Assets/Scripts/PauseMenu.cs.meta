@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3718ff89973266740b7336c2f5c1ac8b
+timeCreated: 1493466417
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - pauseMenuFont: {instanceID: 0}
+  - talk: {instanceID: 0}
+  - click: {instanceID: 0}
+  - statsPanel: {fileID: 1040730427519164, guid: 8663c967bba82f343b60d96290f421e7,
+      type: 2}
+  - respect: {fileID: 1099003239953424, guid: 5e970ce72d5084647a0a07a295c71737, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

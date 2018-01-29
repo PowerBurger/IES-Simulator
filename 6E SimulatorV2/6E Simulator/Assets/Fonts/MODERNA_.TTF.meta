@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d251c084927a4324d916b20c780967e1
+timeCreated: 1493319177
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: moderna
+  fontNames:
+  - moderna
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

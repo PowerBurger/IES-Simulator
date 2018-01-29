@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 51df13bf082863841b71c48fe5468b7c
+timeCreated: 1493319464
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Swatch it
+  fontNames:
+  - Swatch it
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 732974320d97d3145b8a3b98de7e5583
+timeCreated: 1495969744
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - lines: {instanceID: 0}
+  - MrFaxen: {instanceID: 0}
+  - sidequests: {instanceID: 0}
+  - textBoxManager: {instanceID: 0}
+  - pauseMenu: {instanceID: 0}
+  - AngryHampus: {instanceID: 0}
+  - Intro: {fileID: 4900000, guid: 1f0ca2e5a45a70445847f0a9e46e1566, type: 3}
+  - HildeZone: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

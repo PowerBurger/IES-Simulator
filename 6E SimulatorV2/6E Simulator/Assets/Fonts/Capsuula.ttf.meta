@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f36ee15b272838e4da3036ec9f803505
+timeCreated: 1493319390
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Capsuula
+  fontNames:
+  - Capsuula
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
