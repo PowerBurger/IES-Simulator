@@ -35,16 +35,10 @@ public class CharacterChecker : MonoBehaviour
 	void Update ()
     {
         lines = GetComponent<Text>();
-        print(lines.text.Substring(0, 4).ToLower());
 
         if (lines.text.Substring(0,3).ToLower() == "so," )
         {
             sidequests.ACounterStrike(false);
-        }
-
-        if (lines.text.Substring(0, 4).ToLower() == "swoo")
-        {
-            GameObject.Find("FPSController").transform.position = new Vector3(-277.1f, -6.23f, 2382.99f);
         }
 
         if (lines.text.Substring(0, 2).ToLower() == "no")
@@ -87,7 +81,7 @@ public class CharacterChecker : MonoBehaviour
         {
             sidequests.Laptops(true);
         }
-            //
+
         if (lines.text.Substring(0, 13).ToLower() == "okay then...f")
         {
             Application.LoadLevel("D5");
