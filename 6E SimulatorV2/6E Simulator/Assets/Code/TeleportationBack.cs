@@ -27,7 +27,7 @@ public class TeleportationBack : MonoBehaviour {
     {
         if(other.gameObject.name == "ColDetector")
         {
-            Application.LoadLevel("Schoolyard");
+            player.transform.position = new Vector3(-62.25f, 10.65358f, -230.52f);
         }
     }
 }

@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
+//using UnityEngine.Networking;
 using UnityEngine.UI;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 
 public class Connect : MonoBehaviour
 {
 
-    public string IpAddress;
-    public int Port;
+    //public string IpAddress;
+    //public int Port;
     Text playback;
     public Transform Player;
     public Camera cam;
     public Camera Realcam;
+
+    public GameObject loadingScreen;
+    public GameObject titleScreen;
+    public UnityEngine.UI.Slider sliderr;
 
     void Start ()
     {
@@ -63,19 +68,34 @@ public class Connect : MonoBehaviour
 
     public void StartHost()
     {
-        Application.LoadLevel("Schoolyard");
-        //NetworkManager.singleton.networkPort = Port;        
-        //NetworkManager.singleton.StartHost();
-        
-        
+        //StartCoroutine(LoadAsyncronously());
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Schoolyard");
+    }
 
+    IEnumerator LoadAsyncronously()
+    {
+        //AsyncOperation operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Schoolyard");
+
+        loadingScreen.SetActive(true);
+        titleScreen.SetActive(false);
+
+        bool done = false;
+
+        while (!done)
+        {
+            float progress = Mathf.Clamp01(1 / .9f);
+
+            sliderr.value = progress;
+        }
+
+        yield return null;
     }
 
     public void join()
     {
-        NetworkManager.singleton.networkAddress = IpAddress;
-        NetworkManager.singleton.networkPort = Port;
-        NetworkManager.singleton.StartClient();
+        //NetworkManager.singleton.networkAddress = IpAddress;
+        //NetworkManager.singleton.networkPort = Port;
+        //NetworkManager.singleton.StartClient();
     }
 
     public void Hide()
