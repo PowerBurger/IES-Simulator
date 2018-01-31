@@ -18,7 +18,7 @@ public class Connect : MonoBehaviour
 
     public GameObject loadingScreen;
     public GameObject titleScreen;
-    public UnityEngine.UI.Slider sliderr;
+    public Slider sliderr;
 
     void Start ()
     {
@@ -68,27 +68,26 @@ public class Connect : MonoBehaviour
 
     public void StartHost()
     {
-        //StartCoroutine(LoadAsyncronously());
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Schoolyard");
+        StartCoroutine(LoadAsyncronously(1));
     }
 
-    IEnumerator LoadAsyncronously()
+    IEnumerator LoadAsyncronously(int sceneIndex)
     {
-        //AsyncOperation operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Schoolyard");
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         loadingScreen.SetActive(true);
         titleScreen.SetActive(false);
 
-        bool done = false;
-
-        while (!done)
+        while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(1 / .9f);
+            float progress = Mathf.Clamp01(operation.progress / .9f);
 
             sliderr.value = progress;
+
+            yield return null;
         }
 
-        yield return null;
+
     }
 
     public void join()
