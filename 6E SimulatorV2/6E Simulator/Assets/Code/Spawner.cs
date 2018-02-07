@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 public class Spawner : MonoBehaviour
 {
-    private Player player;
+    private GameObject player;
 
     public Transform lowPoint;
     public GameObject Player;
     public GameObject Boss;
+    public GameObject loading;
 
     private void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = GameObject.Find("FPSController");
     }
     void Update()
     {
@@ -23,7 +25,8 @@ public class Spawner : MonoBehaviour
 
         if (Player.transform.position.y < lowPoint.position.y)
         {
-            Application.LoadLevel("Schoolyard");
+            loading.SetActive(true);
+            SceneManager.LoadScene("Schoolyard");
         }
     }
 }

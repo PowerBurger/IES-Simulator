@@ -10,6 +10,8 @@ public class Assesment : MonoBehaviour {
     public GameObject letter;
     private static float gradeTimer = 10;
     private static bool isGraded = false;
+    public GameObject paper;
+    public GameObject loading;
 
 	void Start ()
     {
@@ -25,6 +27,8 @@ public class Assesment : MonoBehaviour {
 
         if(gradeTimer <= 0)
         {
+            paper.SetActive(false);
+            loading.SetActive(true);
             Application.LoadLevel("Schoolyard");
         }
 

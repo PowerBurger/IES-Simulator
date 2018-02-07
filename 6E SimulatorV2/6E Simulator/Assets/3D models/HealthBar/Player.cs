@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour {
 
     public GameObject Boss;
     public Transform lowPoint;
+    public GameObject loading;
 
     private void Awake()
     {
@@ -22,7 +24,9 @@ public class Player : MonoBehaviour {
     {
         if(Health.CurrentVal == 0)
         {
-            Destroy(gameObject);
+            PlayerPrefs.SetInt("defeatedBoss1", 1);
+            loading.SetActive(true);
+            SceneManager.LoadScene("Schoolyard");
         }
 
         if (Boss.transform.position.y < lowPoint.position.y)
