@@ -4,8 +4,8 @@ var main_Rotor_GameObject : GameObject;
 var tail_Rotor_GameObject : GameObject;
 var max_Rotor_Force : float=22241.1081;
 var max_Rotor_Velocity :float=7200;
-var leftjoystick : Joystick;
-var rightjoystick :Joystick;
+//var leftjoystick : Joystick;
+//var rightjoystick :Joystick;
 var StablisingConstant : float=2f;
 static var rotor_Velocity :float=0.0;
 private var rotor_Rotation :float=0.0;
@@ -218,10 +218,10 @@ extrafx();
 
 function extrafx() {
 if(rotor_Velocity>0.4){
-Wind.SetActive(true);
+//Wind.SetActive(true);
 
 }else {
-Wind.SetActive (false);
+//Wind.SetActive (false);
 }
 
 
