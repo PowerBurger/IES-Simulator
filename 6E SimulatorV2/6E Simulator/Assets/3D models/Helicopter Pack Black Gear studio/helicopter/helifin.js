@@ -25,7 +25,7 @@ var RestoringTorqueMultiplier:float=1;
 var Wind : GameObject;
 var dust:GameObject;
 var leave:GameObject;
-private var healthy:helispark;
+//private var healthy:helispark;
 var maxHeight:float;
 var gui:GUIStyle;
 var labelPosition : Rect;
@@ -38,12 +38,12 @@ var refr : GameObject;
 
 
 function Awake () {
-healthy=gameObject.GetComponent(helispark);
+//healthy=gameObject.GetComponent(helispark);
 }
 
 function FixedUpdate() {//Main physics forces section
-if(healthy.state==true){
-}
+//if(healthy.state==true){
+//}
 var torqueValue:Vector3;
 var controlTorque :Vector3 ;
 var value1:float;
@@ -110,9 +110,9 @@ Destroy(GetComponent(helifin));
 
 function Update () {
 
-if(healthy.state==true){
-dead();
-}
+//if(healthy.state==true){
+//dead();
+//}
 if(main_Rotor_Active==true){
 switch(mainrotor_axis)
 		{
@@ -225,7 +225,7 @@ Wind.SetActive (false);
 }
 
 
-if(healthy.state==false&&altitude<15){
+if(/*healthy.state==false&&*/altitude<15){
 dust.GetComponent.<ParticleEmitter>().emit=true;
 dust.GetComponent.<ParticleEmitter>().minEnergy=2.2;
 dust.GetComponent.<ParticleEmitter>().maxEnergy=(rotor_Velocity/1)*6;
