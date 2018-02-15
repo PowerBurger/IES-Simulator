@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if(Health.CurrentVal == 0)
+        if(Health.CurrentVal <= 0)
         {
             PlayerPrefs.SetInt("defeatedBoss1", 1);
             loading.SetActive(true);
