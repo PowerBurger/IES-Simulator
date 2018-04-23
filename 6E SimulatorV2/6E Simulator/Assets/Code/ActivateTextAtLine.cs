@@ -73,17 +73,22 @@ public class ActivateTextAtLine : MonoBehaviour
 
         if (other.name == "ColDetector")
         {
-            talk.SetActive(true);
-            click.SetActive(true);
-
-            if (requireButtonPress)
+            if (requireButtonPress == true)
             {
+                talk.SetActive(true);
+                click.SetActive(true);
+                theTextBox.shouldShowTalk = true;
                 waitForPress = true;
                 return;
+            }
+            else
+            {
+                theTextBox.shouldShowTalk = false;
             }
 
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
+            theTextBox.shouldShowTalk = false;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
             
@@ -99,7 +104,7 @@ public class ActivateTextAtLine : MonoBehaviour
     {
      
 
-        if(other.name == "ColDetector")
+        if(other.name == "ColDetector" && requireButtonPress == false)
         {            
             waitForPress = false;
             talk.SetActive(false);
