@@ -51,7 +51,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
-           
+           if(Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                originalRunSpeed = originalRunSpeed * 20;
+                m_JumpSpeed = m_JumpSpeed * 3;
+            }
         
             
             

@@ -18,7 +18,7 @@ public class FloatingIsland : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.name == "fistCol")
+        if(other.name == "FistCol" && PlayerPrefs.GetInt("OrbOfUnblocking") == 1)
         {
             island.Play("floatingIslandRise");
             //GetComponent<SphereCollider>().enabled = false;
