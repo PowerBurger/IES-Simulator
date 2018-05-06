@@ -104,7 +104,7 @@ public class ActivateTextAtLine : MonoBehaviour
     {
      
 
-        if(other.name == "ColDetector" && requireButtonPress == false)
+        if(other.name == "ColDetector" && requireButtonPress == true)
         {            
             waitForPress = false;
             talk.SetActive(false);

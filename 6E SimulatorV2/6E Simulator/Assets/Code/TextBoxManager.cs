@@ -85,6 +85,7 @@ public class TextBoxManager : MonoBehaviour
             click.SetActive(true);
         }
             bShowSQ = true;
+            currentLine = 0;
 
         }
 
