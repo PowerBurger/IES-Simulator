@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MrHaagFollowPlayer : MonoBehaviour
 {
+    //THIS SCRIPT REQUIRES A FACE CAMERA SCRIPT!!!! DONT FORGET M8!!!
     public int normalSpeed;
     private GameObject FPSController;
     public bool isMad;
@@ -14,7 +15,6 @@ public class MrHaagFollowPlayer : MonoBehaviour
     }
     void Update()
     {
-        //transform.LookAt(FPSController.transform);
 
             if (isMad)
             {
