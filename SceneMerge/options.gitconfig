@@ -3,4 +3,4 @@
 
     [mergetool "unityyamlmerge"]
     trustExitCode = false
-    cmd = '<INSIDE THESE THINGS, WRITE THE PATH TO UNITY YAML.EXE, WHICH IS IN YOU UNITY INSTALLATION. FOR MORE INFO: https://docs.unity3d.com/Manual/SmartMerge.html>' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+    cmd = '<D:\Hampus\Program\Unity\2017.3.1f1\Editor\Data\Tools\UnityYAMLMerge.exe>' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
