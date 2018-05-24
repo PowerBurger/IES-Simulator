@@ -11,7 +11,10 @@ UNITY
 1. Go to unity3d.com
 2. Create an account
 3. Click get unity
-4. Click download personal
+4. Click Personal
 5. Click download Unity Hub
 
 GITHUB
+1. Go to GitHub.com (haha syke you're already on it!)
+2. Create an account
+3. Go to desktop.github.com and
