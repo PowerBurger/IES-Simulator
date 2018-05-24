@@ -7,6 +7,7 @@ Contact me if you want to contribute! (speedframegames@gmail.com) It was made in
 Here's a little step by step guide to getting everything set up!
 
 UNITY
+
 First of all, you'll need unity. That's the "game engine" we used to make the game.
 1. Go to unity3d.com
 2. Create an account
@@ -22,6 +23,7 @@ First of all, you'll need unity. That's the "game engine" we used to make the ga
 12. When the download is finished, Unity is all set to go! :)
 
 GITHUB
+
 You're also gonna need GitHub. We'll use this to sync the project between our computers!
 1. Go to GitHub.com (haha syke you're already on it!)
 2. Create an account
@@ -40,3 +42,15 @@ OPENING THE PROJECT
 
 PUBLISHING YOUR CHANGES
 
+Great mate! You've done something. Probably something cool. Like an easter egg or something. Congratz! Now, you need to push (upload) your changes so we can have them as well!
+1. Go to the GitHub Desktop app you downloaded earlier
+2. Write a little summary of what you've added
+3. Click "commit to master" 
+4. BUT WAIT! You're not done. When it's been commited, you need to press the "Push to origin" button in the top right corner!
+5. Once that's done uploading, you're done! We can now download your changes!
+
+BUT ME GET ERROR WHEN ME PRESS COMMIT/PUSH??
+
+If you get an error about a db.lock file, we've got ya covered! Here's two ways to fix it:
+1. Close visual Studio if you have that open. Now
+2. If that doesn't work, go to the specified path and delete the db.lock file.
