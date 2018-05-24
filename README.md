@@ -30,7 +30,13 @@ You're also gonna need GitHub. We'll use this to sync the project between our co
 5. When the installation is complete, go to https://github.com/SpeedFrame/IES-Simulator and click "Clone or Download".
 6. Click "Open in desktop" and say yes to any prompts that pop up.
 7. Now, GitHub desktop should start cloning the project (you'll see a progress bar!)
-8. When that's done, you're pretty much ready to go. BUT! You won't be able to publish your changes scince you aren't a collaborator. Message me on the discord server (Power_Burger) or email (speedframegames@emailcom
+8. When that's done, you're pretty much ready to go. BUT! You won't be able to publish your changes scince you aren't a collaborator. Message me on the discord server (Power_Burger) or email (speedframegames@gmail.com) and tell me your GitHub username, and I'll invite you to collaborate on the project :D. Then you should get an email saying "SpeedFrame invited you to collaborate" or something similar. Click yes!
+9. Woah! GitHub is all set up! YA DID IT!
 
 OPENING THE PROJECT
+1. Find the path you clones IES Simulator to. This is in Documents by default. To find it you can gi to GitHub desktop and click "IES Simulator" and then right click on "IES SImulator" (below). Then press "Show in explorer".
+2. So, you got the file path. Yay! Now go to Unity Hub, go to projects and click Projects. Now go to open, and find your project file. It's the folder called "6E SImulator" and it has Assets and other stuff in it. Open that folder!
+3. Voila! You're now in unity. Next time, you won't need to find the path again, it will just "appear" in unity Hub. 
+
+PUBLISHING YOUR CHANGES
 
