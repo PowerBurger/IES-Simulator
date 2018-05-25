@@ -2,7 +2,7 @@
 The source code for IES Simulator!             
 GameJolt page: https://gamejolt.com/games/6esimulator/253852                      
 Discord - chat and post ideas: https://discord.gg/JaeymhH                    
-Contact me if you want to contribute! (speedframegames@gmail.com) It was made in unity so you'll have to get that. Unity is free so yay.
+Contact us if you want to contribute! (speedframegames@gmail.com) It was made in unity so you'll have to get that. Unity is free so yay.
 
 Here's a little step by step guide to getting everything set up!
 
@@ -49,8 +49,23 @@ Great mate! You've done something. Probably something cool. Like an easter egg o
 4. BUT WAIT! You're not done. When it's been commited, you need to press the "Push to origin" button in the top right corner!
 5. Once that's done uploading, you're done! We can now download your changes!
 
+MERGING
+
+
+AAAAAAND THAT SHOULD DO IT! If you get any errors, I have some common ones below. Otherwise feel free to contact us\ (•◡•) /
+
+GITHUB SAYS ME NO HAVE PERMISSSION? EVEN THOUGH ME DO???
+
+1. Log out of GitHub desktop
+2. Log back in
+3. Enjoy your day
+
 BUT ME GET ERROR WHEN ME PRESS COMMIT/PUSH??
 
 If you get an error about a db.lock file, we've got ya covered! Here's two ways to fix it:
-1. Close visual Studio if you have that open. Now
+1. Close visual Studio if you have that open. Now try commiting/pushing.
 2. If that doesn't work, go to the specified path and delete the db.lock file.
+
+OHNO! GITHUB GIVES ME ERROR WHEN I PULL (download someone's changes)
+
+That's probably because you have some local edits. If you didn't do anthing significant, you can right click on a change and select discard all. BUT BE CAREFUL! If you have made something without uploading, this will delete it. If you want to keep your changes while still downloading someone else's changes, you need to merge.
