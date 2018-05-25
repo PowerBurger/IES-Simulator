@@ -50,9 +50,14 @@ Great mate! You've done something. Probably something cool. Like an easter egg o
 5. Once that's done uploading, you're done! We can now download your changes!
 
 MERGING
+If you worked at the same time as someone else, we will have two separate versions of the game. That's not what we want ಠ╭╮ಠ
+So yeah. We need to merge them! Normally this is pretty easy. It should merge automaticly when you download and have local changes. 
+BUUUT! There is a problem. If you have changed the same scene (which often happens) it won't be able to merge. There is a solution, but it's quite tricky. I have it set up on my computer, but this is what you need to do:
+1. Find options.gitconfig. It's in a folder called "Scene Merge"
+2. Open the file in notepad. There will be <brackets> and inside those, write the path to your unity installation. Then inside your unity folder,
 
-
-AAAAAAND THAT SHOULD DO IT! If you get any errors, I have some common ones below. Otherwise feel free to contact us\ (•◡•) /
+AAAAAAND THAT SHOULD DO IT! If you get any errors, I have some common ones below. Otherwise feel free to contact us
+\ (•◡•) /
 
 GITHUB SAYS ME NO HAVE PERMISSSION? EVEN THOUGH ME DO???
 
