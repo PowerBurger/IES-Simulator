@@ -16,7 +16,6 @@ public class Connect : MonoBehaviour
     public Camera cam;
     public Camera Realcam;
 
-    public GameObject loadingScreen;
     public GameObject titleScreen;
     public Slider sliderr;
 
@@ -75,7 +74,6 @@ public class Connect : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        loadingScreen.SetActive(true);
         titleScreen.SetActive(false);
 
         while (!operation.isDone)
