@@ -46,12 +46,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool canMove = true;
         public float originalRunSpeed;
         public float originalWalkSpeed;
+        public bool useSuperSpeedInUnity;
        
 
         // Use this for initialization
         private void Start()
         {
-           if(Application.platform == RuntimePlatform.WindowsEditor)
+           if(Application.platform == RuntimePlatform.WindowsEditor && useSuperSpeedInUnity)
             {
                 originalRunSpeed = originalRunSpeed * 20;
                 m_JumpSpeed = m_JumpSpeed * 3;

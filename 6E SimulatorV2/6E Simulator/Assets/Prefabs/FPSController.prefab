@@ -708,6 +708,7 @@ MonoBehaviour:
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   originalRunSpeed: 14
   originalWalkSpeed: 7
+  useSuperSpeedInUnity: 1
 --- !u!114 &114172659813733190
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -2500,6 +2500,11 @@ Prefab:
       propertyPath: Cookie
       value: 
       objectReference: {fileID: 693787032}
+    - target: {fileID: 114116933895624940, guid: 01c08481b8160f1408b3e7c7bd03c6ef,
+        type: 2}
+      propertyPath: useSuperSpeedInUnity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01c08481b8160f1408b3e7c7bd03c6ef, type: 2}
   m_IsPrefabParent: 0
