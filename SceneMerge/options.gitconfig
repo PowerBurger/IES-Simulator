@@ -1,4 +1,4 @@
- [merge]
+ [merge]d
     tool = unityyamlmerge
 
     [mergetool "unityyamlmerge"]
