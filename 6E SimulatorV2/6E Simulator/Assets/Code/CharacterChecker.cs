@@ -57,6 +57,11 @@ public class CharacterChecker : MonoBehaviour
             sidequests.AngryBetaTester(false);
         }
 
+        if (lines.text.Substring(0, 27).ToLower() == "now, i shall chase you like")
+        {
+            GameObject.Find("Mr.HaagPizzeria").GetComponent<MrHaagFollowPlayer>().isMad = true;
+        }
+
         if (lines.text.Substring(0, 9).ToLower() == "at least ")
         {
             sidequests.AngryBetaTester(true);

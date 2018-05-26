@@ -11,6 +11,8 @@ public class TextBoxManager : MonoBehaviour
     public GameObject talk;
     public GameObject click;
 
+    
+
     public Text theText;
 
     public TextAsset textFile;
@@ -21,6 +23,9 @@ public class TextBoxManager : MonoBehaviour
 
     public static bool isActive;
     public bool bShowSQ = false;
+
+    [HideInInspector]
+    public bool shouldShowTalk;
 
 
 
@@ -71,12 +76,16 @@ public class TextBoxManager : MonoBehaviour
         }
 
         // when talk done,allow sidequest
-        if(currentLine > endAtLine)
+        if (currentLine > endAtLine)
         {
             DisableTextBox();
+            if (shouldShowTalk)
+            { 
             talk.SetActive(true);
             click.SetActive(true);
+        }
             bShowSQ = true;
+            currentLine = 0;
 
         }
 
