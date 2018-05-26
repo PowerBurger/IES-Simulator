@@ -1,4 +1,4 @@
-# IES-Simulator
+﻿# IES-Simulator
 The source code for IES Simulator!             
 GameJolt page: https://gamejolt.com/games/6esimulator/253852                      
 Discord - chat and post ideas: https://discord.gg/JaeymhH                    
@@ -38,7 +38,7 @@ You're also gonna need GitHub. We'll use this to sync the project between our co
 OPENING THE PROJECT
 1. Find the path you clones IES Simulator to. This is in Documents by default. To find it you can gi to GitHub desktop and click "IES Simulator" and then right click on "IES SImulator" (below). Then press "Show in explorer".
 2. So, you got the file path. Yay! Now go to Unity Hub, go to projects and click Projects. Now go to open, and find your project file. It's the folder called "6E SImulator" and it has Assets and other stuff in it. Open that folder!
-3. Voila! You're now in unity. Next time, you won't need to find the path again, it will just "appear" in unity Hub. 
+3. Voila! You're now in unity. Next time, you won't need to find the path again, it will just "appear" in Unity Hub. 
 
 PUBLISHING YOUR CHANGES
 
