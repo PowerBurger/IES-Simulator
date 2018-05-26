@@ -20,9 +20,9 @@ public class GetOnMotorbike : MonoBehaviour {
 		if(isFollowingPlayer == true)
         {
             transform.position = new Vector3(thePlayer.transform.position.x, thePlayer.transform.position.y - 1.5f, thePlayer.transform.position.z);
-            Quaternion temprot = transform.rotation;
-            temprot.y = thePlayer.transform.rotation.y;
-            transform.rotation = temprot;
+            Vector3 temprot = transform.eulerAngles;
+            temprot.y = thePlayer.transform.eulerAngles.y;
+            transform.eulerAngles = temprot;
 
         }
 	}
