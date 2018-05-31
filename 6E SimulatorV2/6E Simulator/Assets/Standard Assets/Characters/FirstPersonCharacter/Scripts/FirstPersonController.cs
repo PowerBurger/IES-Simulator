@@ -21,7 +21,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
-        [SerializeField] private bool m_UseHeadBob;
+        [SerializeField] public bool m_UseHeadBob;
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
@@ -46,12 +46,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool canMove = true;
         public float originalRunSpeed;
         public float originalWalkSpeed;
+        public bool useSuperSpeedInUnity;
        
 
         // Use this for initialization
         private void Start()
         {
-           if(Application.platform == RuntimePlatform.WindowsEditor)
+           if(Application.platform == RuntimePlatform.WindowsEditor && useSuperSpeedInUnity)
             {
                 originalRunSpeed = originalRunSpeed * 20;
                 m_JumpSpeed = m_JumpSpeed * 3;
