@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class GetOnMotorbike : MonoBehaviour {
 
@@ -14,10 +16,17 @@ public class GetOnMotorbike : MonoBehaviour {
         thePlayer = GameObject.Find("FPSController");
 	}
 	
-	// Update is called once per frame
+	// This is called 30 frames per second if u r a peasant.
 	void Update ()
     {
-		if(isFollowingPlayer == true)
+
+        if (Input.GetKeyDown(KeyCode.LeftControl) && isDriving)
+        {
+            GetOff();
+            isFollowingPlayer = false;
+        }
+
+        if (isFollowingPlayer == true)
         {
             transform.position = new Vector3(thePlayer.transform.position.x, thePlayer.transform.position.y - 1.5f, thePlayer.transform.position.z);
             Vector3 temprot = transform.eulerAngles;
@@ -25,6 +34,8 @@ public class GetOnMotorbike : MonoBehaviour {
             transform.eulerAngles = temprot;
 
         }
+
+      
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -43,5 +54,30 @@ public class GetOnMotorbike : MonoBehaviour {
         isDriving = true;
         isFollowingPlayer = true;
         thePlayer.transform.Find("Height").transform.position = new Vector3(thePlayer.transform.Find("Height").transform.position.x, thePlayer.transform.Find("Height").transform.position.y + 1.6f, thePlayer.transform.Find("Height").transform.position.z);
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_UseHeadBob = false;
+        GameObject.Find("ctrl to jump off").GetComponent<Text>().enabled = true;
+    }
+
+    public void GetOff()
+    {
+
+        isDriving = false;
+        isFollowingPlayer = false;
+
+        //Move player a bit
+        Vector3 playernewpos;
+        playernewpos = GameObject.Find("FPSController").transform.position;
+        playernewpos.x += 10f;
+        GameObject.Find("FPSController").transform.position = playernewpos;
+
+        thePlayer.transform.Find("Height").transform.position = new Vector3(thePlayer.transform.Find("Height").transform.position.x, thePlayer.transform.Find("Height").transform.position.y - 1.6f, thePlayer.transform.Find("Height").transform.position.z);
+        
+
+        
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_UseHeadBob = true;
+        GameObject.Find("ctrl to jump off").GetComponent<Text>().enabled = false;
+
+        isDriving = false;
+        isFollowingPlayer = false;
     }
 }
