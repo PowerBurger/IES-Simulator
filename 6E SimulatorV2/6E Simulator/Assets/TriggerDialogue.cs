@@ -7,6 +7,9 @@ public class TriggerDialogue : MonoBehaviour
 
     public Dialogue dialogue;
 
+    [HideInInspector]
+    public bool isInsideTalkZone;
+
     private void Start()
     {
         
