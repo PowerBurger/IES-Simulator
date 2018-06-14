@@ -1676,6 +1676,7 @@ MonoBehaviour:
     sentences:
     - Huheh
     - 'You are now triggered xD lol heh '
+    destroyWhenDone: 0
 --- !u!114 &114412566393886506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2092,7 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732974320d97d3145b8a3b98de7e5583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lines: {fileID: 0}
+  lines: $
   MrFaxen: {fileID: 0}
   sidequests: {fileID: 0}
   textBoxManager: {fileID: 0}
@@ -2849,7 +2850,7 @@ RectTransform:
   m_LocalScale: {x: 0.54794145, y: 0.54794145, z: 0.54794145}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2886,7 +2887,7 @@ RectTransform:
   - {fileID: 224499371066385064}
   - {fileID: 224087116447650522}
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2904,7 +2905,7 @@ RectTransform:
   m_LocalScale: {x: 0.8836543, y: 0.9352951, z: 0.8720701}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2994,7 +2995,7 @@ RectTransform:
   m_LocalScale: {x: 0.30284998, y: 0.30284998, z: 0.30284998}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3031,17 +3032,17 @@ RectTransform:
   m_Children:
   - {fileID: 224306285262442624}
   - {fileID: 224285076575330688}
-  - {fileID: 224217896645320806}
   - {fileID: 224993911827766214}
-  - {fileID: 224787165172490432}
-  - {fileID: 224258335641851684}
-  - {fileID: 224357379818461168}
   - {fileID: 224403871746744904}
+  - {fileID: 224413002715938594}
+  - {fileID: 224787165172490432}
+  - {fileID: 224217896645320806}
+  - {fileID: 224258335641851684}
   - {fileID: 224932603220631700}
+  - {fileID: 224357379818461168}
   - {fileID: 224173898751196032}
   - {fileID: 224157948042351870}
   - {fileID: 224989097110894824}
-  - {fileID: 224413002715938594}
   - {fileID: 224405054149692282}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -3120,7 +3121,7 @@ RectTransform:
   - {fileID: 224887561301757162}
   - {fileID: 224758711973861080}
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3138,7 +3139,7 @@ RectTransform:
   m_LocalScale: {x: 0.10758, y: 0.10758, z: 0.10758}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3175,7 +3176,7 @@ RectTransform:
   m_LocalScale: {x: 0.10758, y: 0.10758, z: 0.10758}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 12
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3355,7 +3356,7 @@ RectTransform:
   m_LocalScale: {x: 1.1589279, y: 1.2810668, z: 8.428579}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3500,7 +3501,7 @@ RectTransform:
   m_LocalScale: {x: 0.54794, y: 0.54794, z: 0.54794}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3518,7 +3519,7 @@ RectTransform:
   m_LocalScale: {x: 0.10757721, y: 0.1075772, z: 0.1075772}
   m_Children: []
   m_Father: {fileID: 224297128735541588}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
