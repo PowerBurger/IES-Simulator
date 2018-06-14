@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -22,7 +23,7 @@ public class DialogueManager : MonoBehaviour {
     private void Update()
     {
         //print(sentences);
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             DisplayNextSentence();
         }
@@ -35,16 +36,17 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
-        isTalking = true;
         animator.SetBool("IsOpen", true);
+        isTalking = true;
         sentences.Clear();
+        FirstPersonController.canMove = false;
 
         foreach(string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
 
-        //DisplayNextSentence();
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
@@ -57,25 +59,26 @@ public class DialogueManager : MonoBehaviour {
 
         sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        TypeSentence(sentence);
         print(sentence.ToString());
     }
 
-    IEnumerator TypeSentence (string sentence2)
+    void TypeSentence (string sentence2)
     {
         dialogueText.text = "";
         foreach(char letter in sentence2.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.01f);
+            //yield return null;
         }
     }
 
     public void EndDialogue()
     {
-        isTalking = false;
         animator.SetBool("IsOpen", false);
+        isTalking = false;
         print("end of story");
+        FirstPersonController.canMove = true;
 
         //This will kind of check if the player is still in the zone to activate/deactivate the prompt
         var people = FindObjectsOfType<TriggerDialogue>();

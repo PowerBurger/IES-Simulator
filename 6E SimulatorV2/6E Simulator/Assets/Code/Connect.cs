@@ -67,23 +67,24 @@ public class Connect : MonoBehaviour
 
     public void StartHost()
     {
-        StartCoroutine(LoadAsyncronously(1));
+        LoadAsyncronously(1);
     }
 
-    IEnumerator LoadAsyncronously(int sceneIndex)
+    void LoadAsyncronously(int sceneIndex)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        //AsyncOperation operation = 
+        SceneManager.LoadScene(sceneIndex);
 
         titleScreen.SetActive(false);
 
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+        //while (!operation.isDone)
+        //{
+        //    float progress = Mathf.Clamp01(operation.progress / .9f);
 
-            sliderr.value = progress;
+        //    sliderr.value = progress;
 
-            yield return null;
-        }
+        //    yield return null;
+        //}
 
 
     }
