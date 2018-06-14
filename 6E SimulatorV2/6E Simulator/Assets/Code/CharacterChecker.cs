@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class CharacterChecker : MonoBehaviour
 {
-    public Text lines;
+    public string lines;
     public GameObject MrFaxen;
     public Sidequests sidequests;
-    public TextBoxManager textBoxManager;
+    public DialogueManager textBoxManager;
     public PauseMenu pauseMenu;
     public TextAsset AngryHampus;
     public TextAsset Intro;
@@ -19,91 +19,91 @@ public class CharacterChecker : MonoBehaviour
     void Start ()
     {
         sidequests = FindObjectOfType<Sidequests>();
-        textBoxManager = FindObjectOfType<TextBoxManager>();
+        textBoxManager = FindObjectOfType<DialogueManager>();
         pauseMenu = FindObjectOfType<PauseMenu>();
 
-        if (PlayerPrefs.GetInt("Intro") == 0)
-        {
-            textBoxManager.ReloadScript(Intro);
-            textBoxManager.currentLine = 1;
-            textBoxManager.endAtLine = 4;
-            textBoxManager.EnableTextBox();
-        }
+        //if (PlayerPrefs.GetInt("Intro") == 0)
+        //{
+        //    textBoxManager.ReloadScript(Intro);
+        //    textBoxManager.currentLine = 1;
+        //    textBoxManager.endAtLine = 4;
+        //    textBoxManager.EnableTextBox();
+        //}
     }
 	
 
 	void Update ()
     {
-        lines = GetComponent<Text>();
-        print(lines.text.Substring(0, 4).ToLower());
+        lines = FindObjectOfType<DialogueManager>().sentence.ToString();
+        //print(lines.text.Substring(0, 4).ToLower());
 
-        if (lines.text.Substring(0,3).ToLower() == "so," )
+        if (lines.Substring(0,3).ToLower() == "so," )
         {
             sidequests.ACounterStrike(false);
         }
 
-        if (lines.text.Substring(0, 4).ToLower() == "swoo")
+        if (lines.Substring(0, 4).ToLower() == "swoo")
         {
             GameObject.Find("FPSController").transform.position = new Vector3(-277.1f, -6.23f, 2382.99f);
         }
 
-        if (lines.text.Substring(0, 2).ToLower() == "no")
+        if (lines.Substring(0, 2).ToLower() == "no")
         {
             sidequests.ACounterStrike(true);
         }
 
-        if (lines.text.Substring(0, 7).ToLower() == "go shou")
+        if (lines.Substring(0, 7).ToLower() == "go shou")
         {
             sidequests.AngryBetaTester(false);
         }
 
-        if (lines.text.Substring(0, 27).ToLower() == "now, i shall chase you like")
+        if (lines.Substring(0, 27).ToLower() == "now, i shall chase you like")
         {
             GameObject.Find("Mr.HaagPizzeria").GetComponent<MrHaagFollowPlayer>().isMad = true;
         }
 
-        if (lines.text.Substring(0, 9).ToLower() == "at least ")
+        if (lines.Substring(0, 9).ToLower() == "at least ")
         {
             sidequests.AngryBetaTester(true);
         }
 
-        if (lines.text.Substring(0, 8).ToLower() == "okay. 7f")
+        if (lines.Substring(0, 8).ToLower() == "okay. 7f")
         {
-            textBoxManager.currentLine = 0;
+            //textBoxManager.currentLine = 0;
             Application.LoadLevel("Matsal");
         }
 
-        if (lines.text.Substring(0, 9).ToLower() == "at least,")
+        if (lines.Substring(0, 9).ToLower() == "at least,")
         {
             sidequests.Fox(false);
         }
 
-        if (lines.text.Substring(0, 11).ToLower() == "thanks mate")
+        if (lines.Substring(0, 11).ToLower() == "thanks mate")
         {
             sidequests.Milk(false);
         }
 
-        if (lines.text.Substring(0, 20).ToLower() == "this is not holiday!")
+        if (lines.Substring(0, 20).ToLower() == "this is not holiday!")
         {
             sidequests.Laptops(false);
         }
 
-        if (lines.text.Substring(0, 25).ToLower() == "holiday means apple award")
+        if (lines.Substring(0, 25).ToLower() == "holiday means apple award")
         {
             sidequests.Laptops(true);
         }
             //
-        if (lines.text.Substring(0, 13).ToLower() == "okay then...f")
+        if (lines.Substring(0, 13).ToLower() == "okay then...f")
         {
             Application.LoadLevel("D5");
         }
 
-        if (lines.text.Substring(0, 12).ToLower() == "may the fo..")
+        if (lines.Substring(0, 12).ToLower() == "may the fo..")
         {
             PlayerPrefs.SetInt("BasementKey", 1);
         }
 
-        if (lines.text.Substring(0, 5).ToLower() == "waaaa")
+        if (lines.Substring(0, 5).ToLower() == "waaaa")
         {
             if (MrFaxen.GetComponent<SpriteRenderer>().sprite !=  MrFoxNameTag)
             {
@@ -115,19 +115,22 @@ public class CharacterChecker : MonoBehaviour
             sidequests.Fox(true);
         }
 
-        if (lines.text.Substring(0, 5).ToLower() == "shchh")
+        if (lines.Substring(0, 5).ToLower() == "shchh")
         {
             sidequests.Milk(true);
             PlayerPrefs.SetInt("Cookie", 1);
         }
 
-        if (lines.text.Substring(0, 7).ToLower() == "hey...." && sidequests.AngryBetaTesterDone == 1)
+        if (lines.Substring(0, 7).ToLower() == "hey...." && sidequests.AngryBetaTesterDone == 1)
         {
-            textBoxManager.ReloadScript(AngryHampus);
-            textBoxManager.currentLine = 1;
-            textBoxManager.endAtLine = 10;
-            textBoxManager.EnableTextBox();
-            HildeZone.SetActive(false);
+            //textBoxManager.ReloadScript(AngryHampus);
+            //textBoxManager.currentLine = 1;
+            //textBoxManager.endAtLine = 10;
+            //textBoxManager.EnableTextBox();
+
+            GameObject.Find("AngryHampus").GetComponent<TriggerDialogue>().Talk();
+
+            //HildeZone.SetActive(false);
             PlayerPrefs.SetInt("HasJumpyBoots", 1);
         }
     }

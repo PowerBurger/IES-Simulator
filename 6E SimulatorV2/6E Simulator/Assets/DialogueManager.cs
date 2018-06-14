@@ -16,8 +16,12 @@ public class DialogueManager : MonoBehaviour {
 
     private Queue<string> sentences;
 
+    [HideInInspector]
+    public string sentence;
+
     private void Update()
     {
+        //print(sentences);
         if (Input.GetMouseButtonDown(0))
         {
             DisplayNextSentence();
@@ -51,15 +55,16 @@ public class DialogueManager : MonoBehaviour {
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        print(sentence.ToString());
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence (string sentence2)
     {
         dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
+        foreach(char letter in sentence2.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(0.01f);
