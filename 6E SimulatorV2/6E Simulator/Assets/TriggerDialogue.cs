@@ -43,6 +43,16 @@ public class TriggerDialogue : MonoBehaviour
             //This will make the "click to talk" thing show up
             FindObjectOfType<DialogueManager>().EnablePrompt();
 
+            //Here is a little exeption, because Mr.Haag will talk without you pressing the talk button. How rude!
+            if(gameObject.name == "MrHaagScreamZone")
+            {
+                if (!DialogueManager.isTalking)
+                {
+                    Talk();
+                    FindObjectOfType<DialogueManager>().DisablePrompt();
+                }
+            }
+
             //This will make it remember that it's in the zone (and make sure no other character is)
             var others = FindObjectsOfType<TriggerDialogue>();
             foreach(TriggerDialogue other in others)

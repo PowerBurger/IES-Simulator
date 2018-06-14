@@ -10,6 +10,10 @@ public class DialogueManager : MonoBehaviour {
     public Animator animator;
 
     public static bool isTalking;
+    public static bool talkEndedFrame = false;
+    public static bool talkStartedFrame = false;
+    public static string frameID;
+    Dialogue lastDialogue;
 
     //GUI
     public GameObject talk;
@@ -20,14 +24,7 @@ public class DialogueManager : MonoBehaviour {
     [HideInInspector]
     public string sentence;
 
-    private void Update()
-    {
-        //print(sentences);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DisplayNextSentence();
-        }
-    }
+  
 
     void Start ()
     {
@@ -36,31 +33,56 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("IsOpen", true);
-        isTalking = true;
-        sentences.Clear();
-        FirstPersonController.canMove = false;
+        //Just in case, remove the prompt
+        DisablePrompt();
 
-        foreach(string sentence in dialogue.sentences)
+        //This is if we need to check stuff outide this void
+        lastDialogue = dialogue;
+
+        if (talkEndedFrame == false)
         {
-            sentences.Enqueue(sentence);
+            talkStartedFrame = true;
+            animator.SetBool("IsOpen", true);
+            isTalking = true;
+            sentences.Clear();
+            FirstPersonController.canMove = false;
+
+            foreach (string sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
+
+            DisplayNextSentence();
+        }
+    }
+
+    private void Update()
+    {
+        talkEndedFrame = false;
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            if (isTalking && talkStartedFrame == false)
+            {
+                DisplayNextSentence();
+            }
         }
 
-        DisplayNextSentence();
+        talkStartedFrame = false;
     }
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
 
-        sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        TypeSentence(sentence);
-        print(sentence.ToString());
+            sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            TypeSentence(sentence);
+            print(sentence.ToString());
     }
 
     void TypeSentence (string sentence2)
@@ -75,6 +97,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void EndDialogue()
     {
+        talkEndedFrame = true;
         animator.SetBool("IsOpen", false);
         isTalking = false;
         print("end of story");
@@ -86,11 +109,20 @@ public class DialogueManager : MonoBehaviour {
         {
             if(triggerDialogue.isInsideTalkZone == true)
             {
-                EnablePrompt();
-                return;
+                //Disabled this because it's so buggy, and looks wierd with the box animation.
+                //EnablePrompt();
             }
         }
         
+        //If destroy when done is ticked, time for DESTRUCTION!
+        if(lastDialogue.destroyWhenDone == true)
+        {
+            Destroy(gameObject);
+        }
+
+
+        DisablePrompt();
+
     }
 
     public void DisablePrompt()

@@ -123,11 +123,6 @@ public class CharacterChecker : MonoBehaviour
 
         if (lines.Substring(0, 7).ToLower() == "hey...." && sidequests.AngryBetaTesterDone == 1)
         {
-            //textBoxManager.ReloadScript(AngryHampus);
-            //textBoxManager.currentLine = 1;
-            //textBoxManager.endAtLine = 10;
-            //textBoxManager.EnableTextBox();
-
             GameObject.Find("AngryHampus").GetComponent<TriggerDialogue>().Talk();
 
             //HildeZone.SetActive(false);

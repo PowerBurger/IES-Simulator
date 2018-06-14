@@ -27,10 +27,7 @@ public class MrFox : MonoBehaviour {
     {
         if (other.name == "ColDetector" && PlayerPrefs.GetInt("FoxMedallion") == 1 && sidequests.FoxDone == 1)
         {
-            theTextBox.ReloadScript(MrFoxText);
-            theTextBox.currentLine = 1;
-            theTextBox.endAtLine = 3;
-            theTextBox.EnableTextBox();
+            GameObject.Find("MrFoxQuestDone").GetComponent<TriggerDialogue>().Talk();
         }
     }
 }

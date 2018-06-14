@@ -55,7 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
            if(Application.platform == RuntimePlatform.WindowsEditor && useSuperSpeedInUnity)
             {
                 originalRunSpeed = originalRunSpeed * 20;
-                m_JumpSpeed = m_JumpSpeed * 3;
+                m_JumpSpeed = m_JumpSpeed * 1.5f;
             }
         
             
