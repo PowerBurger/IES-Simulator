@@ -34,10 +34,7 @@ public class LaptopCart : MonoBehaviour {
             {
                 PauseMenu.appleAward += 1;
             }
-            theTextBox.ReloadScript(MrBassonGetsLaptops);
-            theTextBox.currentLine = 1;
-            theTextBox.endAtLine = 5;
-            theTextBox.EnableTextBox();
+            GameObject.Find("MrBassonQuestDone").GetComponent<TriggerDialogue>().Talk();
             MrBassonZone.SetActive(false);
         }
     }

@@ -6,13 +6,11 @@ public class FilipGetsMilk : MonoBehaviour
 {
 
     public TextAsset FilipGetsMilkText;
-    private TextBoxManager theTextBox;
     private Sidequests sidequests;
     public GameObject FilipCharacter;
 
     void Start()
     {
-        theTextBox = FindObjectOfType<TextBoxManager>();
         sidequests = FindObjectOfType<Sidequests>();
     }
 
@@ -28,10 +26,7 @@ public class FilipGetsMilk : MonoBehaviour
     {
         if (other.name == "ColDetector" && PlayerPrefs.GetInt("Milk") == 1 && sidequests.MilkDone == 1)
         {
-            theTextBox.ReloadScript(FilipGetsMilkText);
-            theTextBox.currentLine = 1;
-            theTextBox.endAtLine = 6;
-            theTextBox.EnableTextBox();
+            GameObject.Find("FilipCookieQuestDone").GetComponent<TriggerDialogue>().Talk();
         }
     }
 }

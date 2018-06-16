@@ -35,7 +35,25 @@ public class CharacterChecker : MonoBehaviour
 	void Update ()
     {
         lines = FindObjectOfType<DialogueManager>().sentence.ToString();
+        print("lines is " + lines);
+
+        if (lines == "THANKS MATE")
+        {
+            sidequests.Milk(false);
+        }
         //print(lines.text.Substring(0, 4).ToLower());
+
+        if (lines == "This is not holiday!")
+        {
+            sidequests.Laptops(false);
+        }
+
+        if (lines.Substring(0, 25).ToLower() == "holiday means apple award")
+        {
+            sidequests.Laptops(true);
+        }
+
+       
 
         if (lines.Substring(0,3).ToLower() == "so," )
         {
@@ -77,22 +95,6 @@ public class CharacterChecker : MonoBehaviour
         {
             sidequests.Fox(false);
         }
-
-        if (lines.Substring(0, 11).ToLower() == "thanks mate")
-        {
-            sidequests.Milk(false);
-        }
-
-        if (lines.Substring(0, 20).ToLower() == "this is not holiday!")
-        {
-            sidequests.Laptops(false);
-        }
-
-        if (lines.Substring(0, 25).ToLower() == "holiday means apple award")
-        {
-            sidequests.Laptops(true);
-        }
-            //
         if (lines.Substring(0, 13).ToLower() == "okay then...f")
         {
             Application.LoadLevel("D5");

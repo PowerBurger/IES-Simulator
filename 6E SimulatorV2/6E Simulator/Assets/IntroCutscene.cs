@@ -11,6 +11,7 @@ public class IntroCutscene : MonoBehaviour {
     public float timer = 12;
     bool flip;
     GameObject player;
+    public GameObject makeshiftPlayerStatue;
     public bool enableCutsceneInUnityEditor;
 
     void Start ()
@@ -81,5 +82,8 @@ public class IntroCutscene : MonoBehaviour {
 
         //Now away with the cutscene camera!
         Destroy(cutsceneCamera.gameObject);
+
+        //And away with the statue of the player
+        Destroy(makeshiftPlayerStatue);
     }
 }
