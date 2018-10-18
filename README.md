@@ -1,6 +1,6 @@
 ﻿# IES-Simulator
 The source code for IES Simulator!             
-GameJolt Page: https://gamejolt.com/games/6esimulator/253852                                         
+Play the game here: https://gamejolt.com/games/6esimulator/253852                                         
 Contact us if you want to contribute! (speedframegames@gmail.com) It was made in unity so you'll have to get that. Unity is free so yay.
 
 Here's a little step by step guide to getting everything set up!
