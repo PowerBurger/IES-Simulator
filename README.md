@@ -8,7 +8,7 @@ Here's a little step by step guide to getting everything set up!
 
 UNITY
 
-First of all, you'll need unity. That's the "game engine" we used to make the game.
+First of all, you'll need unity. That's the engine we used to make the game.
 1. Go to unity3d.com
 2. Create an account
 3. Click Get Unity
@@ -49,13 +49,6 @@ Great mate! You've done something. Probably something cool. Like an easter egg o
 4. BUT WAIT! You're not done. When it's been commited, you need to press the "Push to origin" button in the top right corner!
 5. Once that's done uploading, you're done! We can now download your changes!
 
-MERGING
-If you worked at the same time as someone else, we will have two separate versions of the game. That's not what we want ಠ╭╮ಠ
-So yeah. We need to merge them! Normally this is pretty easy. It should merge automaticly when you download and have local changes. 
-BUUUT! There is a problem. If you have changed the same scene (which often happens) it won't be able to merge. There is a solution, but it's quite tricky. I have it set up on my computer, but this is what you need to do:
-1. Find options.gitconfig. It's in the repository folder.
-2. Open the file in notepad. There will be <brackets> and inside those, write the path to your unity merge tool. First, find the folder where you installed unity. Then, go to Editor > Data > Tools. There, you should find UnityYAMLMerge.exe. You need to paste the path to that file in the brackets! Example: <C:\Program Files(x86)\Unity\Editor\Data\Tools\UnityYAMLMerge.exe>
-
 AAAAAAND THAT SHOULD DO IT! If you get any errors, I have some common ones below. Otherwise feel free to contact us
 \ (•◡•) /
 
@@ -73,4 +66,4 @@ If you get an error about a db.lock file, we've got ya covered! Here's two ways 
 
 OHNO! GITHUB GIVES ME ERROR WHEN I PULL (download someone's changes)
 
-That's probably because you have some local edits. If you didn't do anthing significant, you can right click on a change and select discard all. BUT BE CAREFUL! If you have made something without uploading, this will delete it. If you want to keep your changes while still downloading someone else's changes, you need to merge.
+That's probably because you have some local edits. If you didn't do anthing significant, you can right click on a change and select discard all. If you have done something cool though, just press commit and then pull :D
