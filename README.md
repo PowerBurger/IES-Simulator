@@ -31,7 +31,7 @@ You're also gonna need GitHub. We'll use this to sync the project between our co
 5. When the installation is complete, go to https://github.com/SpeedFrame/IES-Simulator and click "Clone or Download".
 6. Click "Open in desktop" and say yes to any prompts that pop up.
 7. Now, GitHub desktop should start cloning the project (you'll see a progress bar!)
-8. When that's done, you're pretty much ready to go. BUT! You won't be able to publish your changes scince you aren't a collaborator. Message me on the discord server (Power_Burger) or email (speedframegames@gmail.com) and tell me your GitHub username, and I'll invite you to collaborate on the project :D. Then you should get an email saying "SpeedFrame invited you to collaborate" or something similar. Click yes!
+8. When that's done, you're pretty much ready to go. BUT! You won't be able to publish your changes scince you aren't a collaborator. You can email speedframegames@gmail.com and write your GitHub username, and I'll invite you to collaborate on the project :D. Then you should get an email saying "SpeedFrame invited you to collaborate" or something similar. Click yes!
 9. Woah! GitHub is all set up! YA DID IT!
 
 OPENING THE PROJECT
